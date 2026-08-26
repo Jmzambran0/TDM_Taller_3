@@ -5,6 +5,11 @@ export function showPokemon(pokemon) {
     document.getElementById("pokemon-name").textContent = capitalize(pokemon.name)
     document.getElementById("pokemon-id").textContent = "#" + pokemon.id.toString().padStart(3, "0")
 
+    document.querySelector(".pokemon-img").onclick = () => {
+        const modal = document.getElementById("pokemon-modal")
+        modal.style.display = "block"
+    }
+
     const typesContainer = document.getElementById("pokemon-types")
     typesContainer.innerHTML = ""
     pokemon.types.forEach(type => {

@@ -9,7 +9,6 @@ export async function fetchPokemon(id) {
         const data = await response.json()
 
         const types = data.types.map(typeInfo => typeInfo.type.name)
-
         const abilities = data.abilities.map(abilityInfo => abilityInfo.ability.name)
         const stats = data.stats.map(statInfo => ({
             name: statInfo.stat.name,
@@ -20,7 +19,11 @@ export async function fetchPokemon(id) {
             data.id,
             data.name,
             types,
-            data.sprites.other["official-artwork"].front_default
+            data.sprites.other["official-artwork"].front_default,
+            data.height,
+            data.weight,
+            abilities,
+            stats
         )
     } catch (error) {
         console.error("Error fetching Pokemon:", error)

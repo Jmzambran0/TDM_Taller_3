@@ -4,6 +4,10 @@ export function showPokemon(pokemon) {
     if (!pokemon) return
     closeModal()
 
+    const card = document.querySelector(".card")
+    card.className = "card"
+    card.classList.add(pokemon.types[0] + "1")
+
     document.getElementById("pokemon-img").src = pokemon.sprite
     document.getElementById("pokemon-name").textContent = capitalize(pokemon.name)
     document.getElementById("pokemon-id").textContent = "#" + pokemon.id.toString().padStart(3, "0")

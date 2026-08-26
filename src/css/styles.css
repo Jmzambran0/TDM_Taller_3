@@ -1,42 +1,63 @@
 :root {
     --amarillo: #FFCB05;
     --azul: #3d7dca;
+    --blanco: #f8f9FA;
     --azul-oscuro: #003a70;
-    --md: 16px;
-    --card-size: 210px;
+    --gris:#808080;
+    --azul-l: #3a4bd1;
+    --azul-d: #2f3fc0;
+    --md: 14px;
 }
 
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    background-color: var(--gris);
+    display: flex;
 }
 
 .card {
+    width: 100%;
+    min-width: 260px;
+    max-width: 600px;
+    padding: 32px 28px;
+    text-align: center;
+    background-color: var(--blanco);
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+    margin: 0 auto 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.3s ease, tranform 0.3s ease;
     cursor: pointer;
 }
 
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgb(0, 0, 0, 0.3);
+}
+
 .buttons {
+    flex: 1;
     background-color: var(--amarillo);
     border-radius: 8px;
     border: none;
     color: var(--amarillo);
-    width: 100%;
     cursor: pointer;
-    padding: 12px 24px;
+    padding: 12px 10px;
     font-size: var(--md);
+    font-weight: 600;
     transition: tranform 0.2s ease, box-shandow 0.3s ease;
 }
 
 .buttons:hover {
-
+    background-color: var(--azul-l);
+    transform: scale(1.04);
+    box-shadow: 0 6px 14px rgb(59, 79, 224, 0.4);
 }
 
 .buttons:active {
-    
+    background-color: var(--azul-d);
+    transform: scale(1.04);
+    box-shadow: 0 6px 14px rgb(59, 79, 224, 0.4);
 }
 
 .pokemon-img {
@@ -89,7 +110,7 @@ body {
     color: #000;
 }
 
-.type.porsion {
+.type.poison {
     background: #9e0a72;
 }
 
@@ -117,6 +138,6 @@ body {
     background: #222222;
 }
 
-.type.drago {
+.type.dragon {
     background: #3f23bb;
 }

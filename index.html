@@ -5,30 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&di
     splay=swap" rel="stylesheet">
 
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg" href="./logos/favicon.svg">
     <title>Pokedex</title>
 </head>
 <body>
     <div class="card">
-        <img src="" alt="personaje" id="char-img">
-        <h2 id="char-name"></h2>
-        <p id="char-role"></p>
+        <img src="" alt="pokemon" id="pokemon-img">
+        <h1 id="pokemon-name"></h1>
+        <p id="pokemon-id"></p>
+        <div class="types" id="pokemon-types"></div>
         <div class="buttons">
-            <button class="prev"></button>
-            <button class="next"></button>
+            <button class="prev">⬅︎ Anterior</button>
+            <button class="next">Siguiente ➡︎</button>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <div id="pokemon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-pokemon-name"></h2>
+            <img src="" alt="pokemon grande" id="modal-pokemon-img">
+
+            <p class="pokemon-id" id="modal-pokemon-id"></p>
+
+            <div class="modal-info">
+                <p><strong>Altura:</strong><span id="modal-pokemon-height"></span></p>
+                <p><strong>Peso:</strong><span id="modal-pokemon-weight"></span></p>
+                <p><strong>Habilidades:</strong><span id="modal-pokemon-habilities"></span></p>
+            </div>
+            <div class="modal-stats" id="modal-stats"></div>
+        </div>
+
+    </div>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>

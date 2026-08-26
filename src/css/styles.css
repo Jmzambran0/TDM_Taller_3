@@ -4,8 +4,8 @@
     --blanco: #f8f9FA;
     --negro: #000000;
     --azul-oscuro: #003a70;
-    --gris:#808080;
-    --gris-claro:#eeeeee;
+    --gris: #808080;
+    --gris-claro: #eeeeee;
     --azul-l: #3a4bd1;
     --azul-d: #2f3fc0;
     --rojo: #ff4d4d;
@@ -29,8 +29,10 @@ body {
     min-height: 100vh;
     padding: 20px;
     background: linear-gradient();
-
+    background-image:url("https://cdn.wallpapersafari.com/22/81/YfWXmu.jpeg") ;
+    background-size: cover;
 }
+
 
 .card {
     width: 100%;
@@ -63,13 +65,15 @@ body {
     margin: 0 auto 15px;
     transition: tranform 0.4s ease;
 }
-#pokemon-name{
+
+#pokemon-name {
     margin: 5px 0;
     font-size: 30px;
     font-weight: 800px;
     color: var(--negro);
 }
-#pokemon-id{
+
+#pokemon-id {
     margin: 5px 0 20px;
     font-size: var(--md);
     font-weight: 500;
@@ -80,14 +84,15 @@ body {
     width: 100%;
     margin-top: 20px;
     border-radius: 12px;
-    padding:0 5px;
+    padding: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
-.buttons button{
-    flex:1;
+
+.buttons button {
+    flex: 1;
     background-color: var(--amarillo);
     border: none;
     border-radius: 8px;
@@ -109,116 +114,174 @@ body {
     transform: scale(1.04);
 }
 
-.types{
+.types {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 30px;
     margin-top: 15px;
-    gap:5px;
+    gap: 5px;
 }
 
-.type{
+.type {
     display: inline-block;
     padding: 3px 4px;
     border-radius: 4px;
     font-size: var(--md);
-    
+
 }
 
 .type.normal {
-    background-image: url("https://i.pinimg.com/736x/20/e9/cf/20e9cf219337614640886180cc5d1c34.jpg");
     background: #bdbdbd;
     color: #000;
 
 }
 
+.type.normal1 {
+    background-image: url("https://i.pinimg.com/736x/20/e9/cf/20e9cf219337614640886180cc5d1c34.jpg");
+
+}
+
 .type.electric {
-    background-image: url("https://i.pinimg.com/736x/0e/ac/6f/0eac6f7aa24b7e98eec7494b5a83c7f9.jpg");
     background: #f7d02c;
     color: #000;
 }
 
+.type.electric1 {
+    background-image: url("https://i.pinimg.com/736x/0e/ac/6f/0eac6f7aa24b7e98eec7494b5a83c7f9.jpg");
+   
+}
+
 .type.fire {
-    background-image: url("https://i.pinimg.com/736x/4b/68/0c/4b680cbda6ff0032e5670468bba0d7b1.jpg");
     background: #ee8130;
 }
 
+.type.fire1 {
+    background-image: url("https://i.pinimg.com/736x/4b/68/0c/4b680cbda6ff0032e5670468bba0d7b1.jpg");
+}
+
 .type.ground {
-    background-image: url("https://i.pinimg.com/originals/0a/4a/ed/0a4aeda3e1de86db9eca96f0f6e6199c.png");
     background: #833900;
 }
 
+.type.ground1 {
+    background-image: url("https://i.pinimg.com/originals/0a/4a/ed/0a4aeda3e1de86db9eca96f0f6e6199c.png");
+}
+
 .type.rock {
-    background-image: url("https://i.pinimg.com/1200x/01/18/b1/0118b182f2a05ca3e56b1a0860354df4.jpg");
     background: #e9d45f;
     color: #000;
 }
 
+.type.rock1 {
+    background-image: url("https://i.pinimg.com/1200x/01/18/b1/0118b182f2a05ca3e56b1a0860354df4.jpg");
+   
+}
+
 .type.water {
-    background-image: url("https://i.pinimg.com/1200x/d5/20/2c/d5202c7f07857400ca50d51560ba6604.jpg");
     background: #6390f0;
 }
 
+.type.water1 {
+    background-image: url("https://i.pinimg.com/1200x/d5/20/2c/d5202c7f07857400ca50d51560ba6604.jpg");
+}
+
 .type.grass {
-    background-image: url("https://i.pinimg.com/736x/3a/87/76/3a8776e9ebab4b0470771cdaf16241ab.jpg");
     background: #7ac74c;
 }
 
+.type.grass1 {
+    background-image: url("https://i.pinimg.com/736x/3a/87/76/3a8776e9ebab4b0470771cdaf16241ab.jpg");
+}
+
 .type.bug {
-    background-image: url("https://i.pinimg.com/736x/38/85/45/38854501b370a74195b6093ceeb1ea05.jpg");
     background: #729f3f;
 }
 
+.type.bug1 {
+    background-image: url("https://i.pinimg.com/736x/38/85/45/38854501b370a74195b6093ceeb1ea05.jpg");
+}
+
 .type.flying {
-    background-image: url("https://i.pinimg.com/736x/f9/a0/57/f9a057116d9fbbaaf1f02138f463e579.jpg");
     background: #3dc7ef;
 }
 
+.type.flying1 {
+    background-image: url("https://i.pinimg.com/736x/f9/a0/57/f9a057116d9fbbaaf1f02138f463e579.jpg");
+}
+
 .type.ice {
-    background-image: url("https://i.pinimg.com/736x/c9/aa/af/c9aaaff068a7af3a771d485f1ae0d805.jpg");
     background: #9be9ff;
     color: #000;
 }
 
+.type.ice1 {
+    background-image: url("https://i.pinimg.com/736x/c9/aa/af/c9aaaff068a7af3a771d485f1ae0d805.jpg");
+  
+}
+
 .type.poison {
-    background-image: url("https://i.pinimg.com/1200x/75/58/b7/7558b754971a730df7fe85b9b8ea1a1c.jpg");
     background: #9e0a72;
 }
 
+.type.poison1 {
+    background-image: url("https://i.pinimg.com/1200x/75/58/b7/7558b754971a730df7fe85b9b8ea1a1c.jpg");
+}
+
 .type.fairy {
-    background-image: url("https://i.pinimg.com/736x/5b/bb/04/5bbb0416fff30a96d9bc4445ad67d862.jpg");
     background: #ff87db;
 }
 
+.type.fairy1 {
+    background-image: url("https://i.pinimg.com/736x/5b/bb/04/5bbb0416fff30a96d9bc4445ad67d862.jpg");
+}
+
 .type.fighting {
-    background-image: url("https://i.pinimg.com/1200x/a3/fc/f6/a3fcf6d0d0b33aba32f5785dab130e30.jpg");
     background: #d33333;
 }
 
+.type.fighting1 {
+    background-image: url("https://i.pinimg.com/1200x/a3/fc/f6/a3fcf6d0d0b33aba32f5785dab130e30.jpg");
+}
+
 .type.psychic {
-    background-image: url("https://i.pinimg.com/1200x/d4/6b/c9/d46bc92614367dd4b053e3570359709e.jpg");
     background: #aa0080;
 }
 
+.type.psychic1 {
+    background-image: url("https://i.pinimg.com/1200x/d4/6b/c9/d46bc92614367dd4b053e3570359709e.jpg");
+}
+
 .type.steel {
-    background-image: url("https://i.pinimg.com/1200x/02/26/37/0226373d08c266ee5df8a3307eb4366a.jpg");
     background: #616161;
 }
 
+.type.steel1{
+    background-image: url("https://i.pinimg.com/1200x/02/26/37/0226373d08c266ee5df8a3307eb4366a.jpg");
+}
+
 .type.ghost {
-    background-image: url("https://i.pinimg.com/1200x/e9/78/b7/e978b7ddef7b124b75ab5ec794c8657e.jpg");
     background: #313d70;
 }
 
+.type.ghost1 {
+    background-image: url("https://i.pinimg.com/1200x/e9/78/b7/e978b7ddef7b124b75ab5ec794c8657e.jpg");
+}
+
 .type.dark {
-    background-image: url("https://i.pinimg.com/236x/24/68/9e/24689e4ad4719e729948f239ca0803e5.jpg");
     background: #222222;
 }
 
+.type.dark1 {
+    background-image: url("https://i.pinimg.com/236x/24/68/9e/24689e4ad4719e729948f239ca0803e5.jpg");
+}
+
 .type.dragon {
-    background-image: url("https://i.pinimg.com/236x/ce/0b/32/ce0b3289f80b843fc3b159224e76aef6.jpg");
     background: #3f23bb;
+}
+
+.type.dragon1 {
+    background-image: url("https://i.pinimg.com/236x/ce/0b/32/ce0b3289f80b843fc3b159224e76aef6.jpg");
 }
 
 .pokemon-id {
@@ -240,6 +303,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 .modal-content {
     background-color: var(--bg-card);
     color: var(--blanco);
@@ -252,23 +316,28 @@ body {
     max-height: fit-content;
     border-radius: 20px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 3px var(--border-glow);
+
     img {
         width: 60%;
         display: block;
         margin: 0 auto;
         align-self: center;
     }
+
     transform: translateY(20px) scale(0.95);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
+
 .modal-overlay.active .modal-content {
     transform: translateY(0) scale(1);
 }
+
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -280,6 +349,7 @@ body {
     background-color: var(--bg-surface);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 3px var(--border-glow);
 }
+
 .close-modal {
     color: var(--rojo);
     float: right;
@@ -289,10 +359,12 @@ body {
     padding: 0;
     transition: transform 0.2s ease, color 0.2s ease;
 }
+
 .close-modal:hover {
     color: var(--amarillo);
     transform: scale(1.1);
 }
+
 #modal-pokemon-id {
     font-weight: bold;
     font-size: 28px;
@@ -300,6 +372,7 @@ body {
     text-shadow: 0 0 8px var(--border-glow);
     margin-top: 5px;
 }
+
 .modal-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -307,6 +380,7 @@ body {
     font-family: Arial, sans-serif;
     margin-bottom: 30px;
 }
+
 .modal-info p {
     background-color: var(--bg-surface);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px var(--border-glow);
@@ -321,18 +395,21 @@ body {
         width: bold;
     }
 }
+
 .modal-info p:last-child {
     grid-column: span 2;
 }
 
 .modal-stats {
     width: 100%;
+
     h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
     }
 }
+
 .stat-row {
     display: grid;
     grid-template-columns: 150px 1fr 35px;
@@ -340,6 +417,7 @@ body {
     gap: 12px;
     margin-bottom: 10px;
 }
+
 .stat-bar-track {
     width: 100%;
     height: 10px;
@@ -347,18 +425,37 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
+
 .stat-bar-fill {
     height: 100%;
     border-radius: 999px;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bar-hp     { background: linear-gradient(90deg, #ff4e50, #f9d423); }
-.bar-attack    { background: linear-gradient(90deg, #ff0844, #ffb199); }
-.bar-defense    { background: linear-gradient(90deg, #4facfe, #00f2fe); }
-.bar-special-attack { background: linear-gradient(90deg, #b224ef, #7579ff); }
-.bar-special-defense { background: linear-gradient(90deg, #11998e, #38ef7d); }
-.bar-speed  { background: linear-gradient(90deg, #00c6ff, #0072ff); box-shadow: 0 0 8px #00c6ff; }
+.bar-hp {
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+}
+
+.bar-attack {
+    background: linear-gradient(90deg, #ff0844, #ffb199);
+}
+
+.bar-defense {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.bar-special-attack {
+    background: linear-gradient(90deg, #b224ef, #7579ff);
+}
+
+.bar-special-defense {
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+}
+
+.bar-speed {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 8px #00c6ff;
+}
 
 .stat-value {
     font-size: 14px;

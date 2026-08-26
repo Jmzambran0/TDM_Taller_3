@@ -1,7 +1,7 @@
 import { fetchPokemon } from "./services/api.js";
 import { showPokemon } from "./ui/ui.js";
 
-let currentPokemonId = 25;
+let currentPokemonId = 46;
 
 async function loadPokemon(id) {
     const pokemon = await fetchPokemon(id);

@@ -19,17 +19,19 @@
     <div class="card">
         <img src="" alt="pokemon" id="pokemon-img">
         <h1 id="pokemon-name"></h1>
-        <p id="pokemon-id"></p>
+        <p class="pokemon-id" id="pokemon-id"></p>
         <div class="types" id="pokemon-types"></div>
         <div class="buttons">
             <button class="prev">⬅︎ Anterior</button>
             <button class="next">Siguiente ➡︎</button>
         </div>
     </div>
-    <div id="pokemon-modal" class="modal">
+    <div id="pokemon-modal" class="modal-overlay">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modal-pokemon-name"></h2>
+            <div class="modal-header">
+                <h2 id="modal-pokemon-name"></h2>
+                <span class="close-modal">&times;</span>
+            </div>
             <img src="" alt="pokemon grande" id="modal-pokemon-img">
 
             <p class="pokemon-id" id="modal-pokemon-id"></p>
@@ -37,9 +39,12 @@
             <div class="modal-info">
                 <p><strong>Altura:</strong><span id="modal-pokemon-height"></span></p>
                 <p><strong>Peso:</strong><span id="modal-pokemon-weight"></span></p>
-                <p><strong>Habilidades:</strong><span id="modal-pokemon-habilities"></span></p>
+                <p><strong>Habilidades:</strong><span id="modal-pokemon-abilities"></span></p>
             </div>
-            <div class="modal-stats" id="modal-stats"></div>
+            <div class="modal-stats">
+                <h3>Estadísticas</h3>
+                <div id="modal-stats"></div>
+            </div>
         </div>
     </div>
     <script type="module" src="./src/main.js"></script>

@@ -38,23 +38,26 @@ body {
     width: 100%;
     max-width: 400px;
     min-height: 0;
-    padding: 40px 20px;
+    padding: 40px 20px 30px;
     text-align: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
     border-radius: 8px;
     margin: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 0 3px var(--border-glow);
     transition: box-shadow 0.3s ease, tranform 0.3s ease;
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgb(0, 0, 0, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), 0 0 0 4px var(--amarillo);
 }
 
 #pokemon-img {
@@ -66,6 +69,7 @@ body {
     object-fit: contain;
     display: block;
     margin: 0 auto 15px;
+    background-color: rgba(0, 0, 0, 0.4);
     transition: tranform 0.4s ease;
 }
 
@@ -74,20 +78,22 @@ body {
     font-size: 45px;
     font-weight: 800px;
     color: var(--gris-claro);
-    -webkit-text-stroke: 2px var(--cafe);
+    text-shadow: 0 3px 10px var(--negro);
 }
 
 #pokemon-id {
-    margin: 5px 0 20px;
-    font-size: 22px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
     font-weight: 500;
     color: var(--blanco);
-    -webkit-text-stroke: 1px var(--negro);
+    text-shadow: 0 3px 10px var(--negro);
+    margin-top: 5px;
 }
 
 .buttons {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 12px;
     padding: 0 7px;
     display: flex;
@@ -105,8 +111,8 @@ body {
     cursor: pointer;
     padding: 10px 12px;
     font-size: var(--md);
-    font-weight: 500;
-    transition: tranform 0.2s ease, box-shandow 0.3s ease;
+    font-weight: bold;
+    transition: tranform 0.2s ease, background-color 0.3s ease;
 }
 
 .buttons button:hover {
@@ -131,154 +137,151 @@ body {
 .type {
     display: inline-block;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 15px;
     font-size: var(--md);
-
+    font-weight: bold;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
 }
 
 .type.normal {
     background: #bdbdbd;
 }
-
 .card.normal1 {
     background-image: url("https://i.pinimg.com/736x/20/e9/cf/20e9cf219337614640886180cc5d1c34.jpg");
 }
 
 .type.electric {
     background: #f7d02c;
+    color:#544300;
 }
-
 .card.electric1 {
     background-image: url("https://i.pinimg.com/236x/13/89/2a/13892ab8b69782eeeca3c09ad10dff1f.jpg");
-   
 }
 
 .type.fire {
     background: #ee8130;
+    color:#5c2800;
 }
-
 .card.fire1 {
     background-image: url("https://i.pinimg.com/736x/4b/68/0c/4b680cbda6ff0032e5670468bba0d7b1.jpg");
 }
 
 .type.ground {
     background: #833900;
+    color: #fff0e5;
 }
-
 .card.ground1 {
     background-image: url("https://i.pinimg.com/originals/0a/4a/ed/0a4aeda3e1de86db9eca96f0f6e6199c.png");
 }
 
 .type.rock {
     background: #e9d45f;
+    color:#615200;
 }
-
 .card.rock1 {
     background-image: url("https://i.pinimg.com/1200x/01/18/b1/0118b182f2a05ca3e56b1a0860354df4.jpg");
-   
 }
 
 .type.water {
     background: #6390f0;
+    color:#001748;
 }
-
 .card.water1 {
     background-image: url("https://i.pinimg.com/1200x/d5/20/2c/d5202c7f07857400ca50d51560ba6604.jpg");
 }
 
 .type.grass {
     background: #7ac74c;
+    color:#1e5200;
 }
-
 .card.grass1 {
     background-image: url("https://i.pinimg.com/736x/3a/87/76/3a8776e9ebab4b0470771cdaf16241ab.jpg");
 }
 
 .type.bug {
     background: #729f3f;
+    color:#203806;
 }
-
 .card.bug1 {
     background-image: url("https://i.pinimg.com/1200x/80/f0/dd/80f0ddcc39e4e76c0ddc8bd66f28eac3.jpg");
 }
 
 .type.flying {
     background: #3dc7ef;
+    color:#012b36;
 }
-
 .card.flying1 {
     background-image: url("https://i.pinimg.com/736x/f9/a0/57/f9a057116d9fbbaaf1f02138f463e579.jpg");
 }
 
 .type.ice {
     background: #9be9ff;
+    color:#003c4c;
 }
-
 .card.ice1 {
     background-image: url("https://i.pinimg.com/736x/c9/aa/af/c9aaaff068a7af3a771d485f1ae0d805.jpg");
-  
 }
 
 .type.poison {
-    background: #9e0a72;
+    background: #d22da0;
+    color:#41002e;
 }
-
 .card.poison1 {
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dgqaze2-fbb9abd3-5e2e-435e-9c2f-484603a2b7eb.png/v1/fill/w_1280,h_1280/badly_poisoned_icon_pokemon_scarlet_and_violet_by_jormxdos_dgqaze2-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGdxYXplMi1mYmI5YWJkMy01ZTJlLTQzNWUtOWMyZi00ODQ2MDNhMmI3ZWIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.k4L1A2woJmOjRqaXAcLLetqnUoVL2yELDCGYFQst5c8");
 }
 
 .type.fairy {
     background: #ff87db;
+    color:#77205d;
 }
-
 .card.fairy1 {
     background-image: url("https://i.pinimg.com/736x/5b/bb/04/5bbb0416fff30a96d9bc4445ad67d862.jpg");
 }
 
 .type.fighting {
     background: #d33333;
+    color:#4d0000;
 }
-
 .card.fighting1 {
     background-image: url("https://i.pinimg.com/736x/ee/aa/07/eeaa074cf87fba90099bf5e1530735ae.jpg");
 }
 
 .type.psychic {
-    background: #aa0080;
+    background: #e437b9;
+    color:#54003f;
 }
-
 .card.psychic1 {
     background-image: url("https://i.pinimg.com/1200x/d4/6b/c9/d46bc92614367dd4b053e3570359709e.jpg");
 }
 
 .type.steel {
-    background: #616161;
+    background: #b4b4b4;
+    color:#232323;
 }
-
 .card.steel1{
     background-image: url("https://i.pinimg.com/1200x/02/26/37/0226373d08c266ee5df8a3307eb4366a.jpg");
 }
 
 .type.ghost {
-    background: #313d70;
+    background: #2b3564;
+    color:#bcc8ff;
 }
-
 .card.ghost1 {
     background-image: url("https://i.pinimg.com/1200x/e3/6e/6c/e36e6c7ce9c7c609ec6834943a724f78.jpg");
 }
 
 .type.dark {
     background: #222222;
+    color:#203806;
 }
-
 .card.dark1 {
     background-image: url("https://w0.peakpx.com/wallpaper/277/427/HD-wallpaper-cubone-pokemon-trees-dark.jpg");
 }
 
 .type.dragon {
     background: #3f23bb;
+    color:#203806;
 }
-
 .card.dragon1 {
     background-image: url("https://i.pinimg.com/236x/ce/0b/32/ce0b3289f80b843fc3b159224e76aef6.jpg");
 }
@@ -323,7 +326,7 @@ body {
         align-self: center;
     }
 
-    transform: translateY(20px) scale(0.95);
+    transform: translateY(20px) scale(0.7);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -460,4 +463,10 @@ body {
     font-size: 14px;
     font-weight: 700;
     text-align: right;
+}
+
+@media (max-height: 720px) {
+    .modal-overlay.active .modal-content {
+    transform: translateY(0) scale(0.75);
+    }
 }
